@@ -24,4 +24,7 @@ protected:
 
 	virtual void BeginPlay() override;
 	void OnBackTriggered();
+	
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category="Menu")
+	TSubclassOf<UUserWidget> MainMenuWidgetClass;
 };

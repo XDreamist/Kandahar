@@ -7,18 +7,18 @@
 
 #include "Blueprint/UserWidget.h"
 
-void UGameMenuManager::Initialize(FSubsystemCollectionBase& Collection)
+void UGameMenuSubsystem::Initialize(FSubsystemCollectionBase& Collection)
 {
 	Super::Initialize(Collection);
 }
 
-void UGameMenuManager::Deinitialize()
+void UGameMenuSubsystem::Deinitialize()
 {
 	this->CloseCurrentMenu();
 	Super::Deinitialize();
 }
 
-void UGameMenuManager::OpenMenu(const TSubclassOf<UUserWidget> MenuClass)
+void UGameMenuSubsystem::OpenMenu(const TSubclassOf<UUserWidget> MenuClass)
 {
 	if (!MenuClass || !GetWorld()) return;
 
@@ -44,7 +44,7 @@ void UGameMenuManager::OpenMenu(const TSubclassOf<UUserWidget> MenuClass)
 	}
 }
 
-void UGameMenuManager::OpenMenu(const EMenuType MenuType) {
+void UGameMenuSubsystem::OpenMenu(const EMenuType MenuType) {
 	switch (MenuType)
 	{
 		case EMenuType::MainMenu:
@@ -64,7 +64,7 @@ void UGameMenuManager::OpenMenu(const EMenuType MenuType) {
 	}
 }
 
-void UGameMenuManager::CloseCurrentMenu()
+void UGameMenuSubsystem::CloseCurrentMenu()
 {
 	if (CurrentMenu) {
 		CurrentMenu->RemoveFromParent();
@@ -78,7 +78,7 @@ void UGameMenuManager::CloseCurrentMenu()
 	}
 }
 
-void UGameMenuManager::GoBack()
+void UGameMenuSubsystem::GoBack()
 {
 	if (MenuHistory.Num() > 0)
 	{

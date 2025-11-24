@@ -11,13 +11,18 @@ void ABasePlayerController::BeginPlay()
 {
 	Super::BeginPlay();
 
+	if (UGameMenuManager* GameMenuManager = GetGameInstance()->GetSubsystem<UGameMenuManager>())
+	{
+		GameMenuManager->OpenMenu(MainMenuWidgetClass);
+	}
+	
 	if (MenuMappingContext && BackAction)
 	{
 		if (const ULocalPlayer* LocalPlayer = GetLocalPlayer())
 		{
-			if (UEnhancedInputLocalPlayerSubsystem* Subsystem = LocalPlayer->GetSubsystem<UEnhancedInputLocalPlayerSubsystem>())
+			if (UEnhancedInputLocalPlayerSubsystem* EnhancedInputLocalPlayerSubsystem = LocalPlayer->GetSubsystem<UEnhancedInputLocalPlayerSubsystem>())
 			{
-				Subsystem->AddMappingContext(MenuMappingContext, 0);
+				EnhancedInputLocalPlayerSubsystem->AddMappingContext(MenuMappingContext, 0);
 			}	
 		}
 	}

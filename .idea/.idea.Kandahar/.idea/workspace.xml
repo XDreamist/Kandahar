@@ -7,7 +7,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e5c06265-241f-4117-911f-57b140e3f6d2" name="Changes" comment="" />
+    <list default="true" id="e5c06265-241f-4117-911f-57b140e3f6d2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Source/Kandahar/Game/BaseGameInstance.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/Kandahar/Game/BaseGameInstance.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/Kandahar/Structs/MenuDataRegistry.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/Kandahar/Structs/MenuDataRegistry.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/Kandahar/Structs/MenuDataStruct.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Source/Kandahar/Structs/MenuDataStruct.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Kandahar/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Kandahar/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Controller/PCBP_BasePlayerController.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/GameMode/GMBP_Kandahar.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/GameMode/GMBP_Kandahar.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Widget/WBP_MainMenu.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Kandahar.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/Kandahar.uproject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Kandahar/Controllers/BasePlayerController.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Kandahar/Controllers/BasePlayerController.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Kandahar/Controllers/BasePlayerController.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Kandahar/Controllers/BasePlayerController.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Kandahar/Managers/GameMenuManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Kandahar/Managers/GameMenuManager.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/Kandahar/Managers/GameMenuManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/Kandahar/Managers/GameMenuManager.h" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,10 +40,19 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Source/Kandahar/Controllers/BasePlayerController.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Kandahar/Controllers/BasePlayerController.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Kandahar/Game/BaseGameInstance.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Kandahar/Game/BaseGameInstance.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Kandahar/Structs/MenuDataRegistry.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Kandahar/Structs/MenuDataRegistry.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Kandahar/Structs/MenuDataStruct.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/Kandahar/Structs/MenuDataStruct.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Kandahar/Widgets/BaseMenuWidget.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Kandahar/Widgets/BaseMenuWidget.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Kandahar/Widgets/MainMenuWidget.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/Kandahar/Widgets/MainMenuWidget.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../UE_5.2/Engine/Source/Developer/Apple/MetalShaderFormat/Private/MetalDerivedData.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../UE_5.2/Engine/Source/Developer/AssetTools/Private/AssetViewUtils.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../UE_5.2/Engine/Source/Developer/AutomationDriver/Private/AutomationDriver.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../UE_5.2/Engine/Source/Developer/ShaderPreprocessor/Private/stb_preprocess/preprocessor.c" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../UE_5.2/Engine/Source/Editor/UnrealEd/Private/Tools/DefaultEdMode.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../UE_5.2/Engine/Source/Runtime/Engine/Private/DebugCameraController.cpp" root0="FORCE_HIGHLIGHTING" />
@@ -40,26 +67,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "C/C++ Project.Kandahar.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;C/C++ Project.Kandahar.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultAutoModeForALLUsers.v1&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="Kandahar" type="CppProject" factoryName="C++ Project">
       <configuration_1 setup="1">
@@ -92,6 +121,8 @@
       <workItem from="1762636138333" duration="7133000" />
       <workItem from="1762681696003" duration="4067000" />
       <workItem from="1762749647111" duration="3467000" />
+      <workItem from="1762798383822" duration="8612000" />
+      <workItem from="1762847763398" duration="8232000" />
     </task>
     <servers />
   </component>

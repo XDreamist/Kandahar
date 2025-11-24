@@ -19,8 +19,8 @@ enum EMenuType
 /**
  * 
  */
-UCLASS()
-class KANDAHAR_API UGameMenuManager : public UGameInstanceSubsystem
+UCLASS(BlueprintType, Blueprintable)
+class KANDAHAR_API UGameMenuSubsystem : public UGameInstanceSubsystem
 {
 	GENERATED_BODY()
 
@@ -41,7 +41,7 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Menu")
 	UUserWidget* GetCurrentMenu() const { return CurrentMenu; }
-
+	
 private:
 	UPROPERTY()
 	UUserWidget* CurrentMenu = nullptr;
