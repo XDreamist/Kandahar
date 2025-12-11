@@ -15,10 +15,7 @@ struct FMenuDataStruct
 	GENERATED_BODY()
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Menu")
-	FName MenuName;
-
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Menu")
-	TSoftClassPtr<class UUserWidget> MenuClass;
+	TSubclassOf<class UUserWidget> MenuClass;
 	
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Menu")
 	int32 ZOrder = 0;

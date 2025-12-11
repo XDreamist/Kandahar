@@ -13,7 +13,7 @@ UCLASS(Abstract)
 class KANDAHAR_API UBaseMenuWidget : public UUserWidget
 {
 	GENERATED_BODY()
-
+	
 public:
 	virtual void NativeOnInitialized() override;
 	virtual void NativeDestruct() override;

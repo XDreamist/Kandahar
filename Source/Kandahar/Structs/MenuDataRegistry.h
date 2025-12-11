@@ -17,5 +17,5 @@ class KANDAHAR_API UMenuDataRegistry : public UDataAsset
 
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category="Menu")
-	TArray<FMenuDataStruct> MenuData;
+	TMap<FString, FMenuDataStruct> MenuData;
 };

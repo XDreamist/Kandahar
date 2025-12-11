@@ -17,4 +17,8 @@ class KANDAHAR_API UBaseGameInstance : public UGameInstance
 public:
 	virtual void Init() override;
 	virtual void Shutdown() override;
+	
+protected:
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Menu")
+	TObjectPtr<class UMenuDataRegistry> MenuRegistry;
 };

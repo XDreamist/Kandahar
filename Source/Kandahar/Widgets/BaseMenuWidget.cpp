@@ -3,7 +3,7 @@
 
 #include "BaseMenuWidget.h"
 
-#include "Kandahar/Managers/GameMenuManager.h"
+#include "Kandahar/Subsystems/GameMenuSubsystem.h"
 
 void UBaseMenuWidget::NativeOnInitialized()
 {
@@ -30,9 +30,9 @@ void UBaseMenuWidget::OnBackPressed()
 {
 	if (CanAutoHandleBack && PreviousMenuClass)
 	{
-		if (UGameMenuManager* GameMenuManager = GetGameInstance()->GetSubsystem<UGameMenuManager>())
+		if (UGameMenuSubsystem* GameMenuSubsystem = GetGameInstance()->GetSubsystem<UGameMenuSubsystem>())
 		{
-			GameMenuManager->OpenMenu(PreviousMenuClass);
+			GameMenuSubsystem->OpenMenu(PreviousMenuClass);
 		}
 	}
 	else

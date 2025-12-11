@@ -38,9 +38,6 @@ protected:
 	UPROPERTY(meta=(BindWidget))
 	UButton* ExitButton;
 
-	UPROPERTY(EditAnywhere, Category = "Menu")
-	TSubclassOf<UUserWidget> SettingsMenuClass;
-
 	virtual void NativeOnInitialized() override;
 
 	UFUNCTION()

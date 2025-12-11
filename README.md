@@ -7,3 +7,6 @@
 # TO-DO
 * Create a Level Manager to automatically load all the levels according to load, new, continue game options.
 * Create a Save Manager to manage the saved games and load saves.
+
+---
+* Set a small error if the menu name is invalid in gamemenusubsystem

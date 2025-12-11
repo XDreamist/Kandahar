@@ -3,11 +3,18 @@
 
 #include "BaseGameInstance.h"
 
-#include "Kandahar/Managers/GameMenuManager.h"
+#include "Kandahar/Subsystems/GameMenuSubsystem.h"
+
+#include "../Structs/MenuDataRegistry.h"
 
 void UBaseGameInstance::Init()
 {
 	Super::Init();
+	
+	if (UGameMenuSubsystem* GameMenuSubsystem = GetSubsystem<UGameMenuSubsystem>())
+	{
+		GameMenuSubsystem->SetMenuRegistry(MenuRegistry->MenuData);
+	}
 }
 
 void UBaseGameInstance::Shutdown()

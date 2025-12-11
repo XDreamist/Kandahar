@@ -4,7 +4,7 @@
 #include "MainMenuWidget.h"
 
 #include "Components/Button.h"
-#include "Kandahar/Managers/GameMenuManager.h"
+#include "Kandahar/Subsystems/GameMenuSubsystem.h"
 #include "Kismet/GameplayStatics.h"
 
 void UMainMenuWidget::NativeOnInitialized()
@@ -22,11 +22,14 @@ void UMainMenuWidget::NativeOnInitialized()
 
 void UMainMenuWidget::OnContinueClicked()
 {
-	UGameplayStatics::OpenLevel(GetWorld(), FName("GameLevel"));
 }
 
 void UMainMenuWidget::OnNewGameClicked()
 {
+	if (UGameMenuSubsystem* GameMenuSubsystem = GetGameInstance()->GetSubsystem<UGameMenuSubsystem>())
+	{
+		GameMenuSubsystem->CloseCurrentMenu();
+	}
 }
 
 void UMainMenuWidget::OnNewGamePlusClicked()
@@ -39,12 +42,9 @@ void UMainMenuWidget::OnLoadClicked()
 
 void UMainMenuWidget::OnSettingsClicked()
 {
-	if (UGameMenuManager* GameMenuManager = GetGameInstance()->GetSubsystem<UGameMenuManager>())
+	if (UGameMenuSubsystem* GameMenuSubsystem = GetGameInstance()->GetSubsystem<UGameMenuSubsystem>())
 	{
-		if (SettingsMenuClass)
-		{
-			GameMenuManager->OpenMenu(SettingsMenuClass);
-		}
+		GameMenuSubsystem->OpenMenu("Settings");
 	}
 }
 

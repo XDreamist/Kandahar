@@ -3,7 +3,7 @@
 
 #include "BasePlayerController.h"
 
-#include "Kandahar/Managers/GameMenuManager.h"
+#include "Kandahar/Subsystems/GameMenuSubsystem.h"
 #include "EnhancedInputSubsystems.h"
 #include "EnhancedInputComponent.h"
 
@@ -11,9 +11,10 @@ void ABasePlayerController::BeginPlay()
 {
 	Super::BeginPlay();
 
-	if (UGameMenuManager* GameMenuManager = GetGameInstance()->GetSubsystem<UGameMenuManager>())
+	// Main Menu when game begins
+	if (UGameMenuSubsystem* GameMenuSubsystem = GetGameInstance()->GetSubsystem<UGameMenuSubsystem>())
 	{
-		GameMenuManager->OpenMenu(MainMenuWidgetClass);
+		GameMenuSubsystem->OpenMenu("MainMenu");
 	}
 	
 	if (MenuMappingContext && BackAction)
@@ -27,6 +28,7 @@ void ABasePlayerController::BeginPlay()
 		}
 	}
 
+	// Input Events
 	if (UEnhancedInputComponent* EnhancedInputComponent = Cast<UEnhancedInputComponent>(InputComponent))
 	{
 		EnhancedInputComponent->BindAction(BackAction, ETriggerEvent::Triggered, this, &ABasePlayerController::OnBackTriggered);
@@ -35,15 +37,15 @@ void ABasePlayerController::BeginPlay()
 
 void ABasePlayerController::OnBackTriggered()
 {
-	if (UGameMenuManager* GameMenuManager = GetGameInstance()->GetSubsystem<UGameMenuManager>())
+	if (UGameMenuSubsystem* GameMenuSubsystem = GetGameInstance()->GetSubsystem<UGameMenuSubsystem>())
 	{
-		if (GameMenuManager->GetCurrentMenu())
+		if (GameMenuSubsystem->GetCurrentMenu())
 		{
-			GameMenuManager->GoBack();
+			GameMenuSubsystem->GoBack();
 		}
 		else
 		{
-			GameMenuManager->OpenMenu(EMenuType::PauseMenu);
+			GameMenuSubsystem->OpenMenu("PauseMenu");
 		}
 	}
 }
